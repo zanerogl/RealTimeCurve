@@ -10,21 +10,20 @@ find_package(Qt5 COMPONENTS Core Gui Widgets PrintSupport REQUIRED)
 
 # 设置源文件
 set(SOURCES
-    main.cpp
-    basewidget.cpp
-    3rd/qcustomplot/qcustomplot.cpp
+        main.cpp
+        basewidget.cpp
+        3rd/qcustomplot/qcustomplot.cpp
 )
 
 # 设置头文件
 set(HEADERS
-    basewidget.h
-    3rd/qcustomplot/qcustomplot.h
-        zWidgets/zcustomplot.cpp zWidgets/zcustomplot.h)
+        basewidget.h
+        3rd/qcustomplot/qcustomplot.h)
 
 # 运行 moc 处理需要 Q_OBJECT 的头文件
 set(MOC_HEADERS
-    basewidget.h
-    3rd/qcustomplot/qcustomplot.h
+        basewidget.h
+        3rd/qcustomplot/qcustomplot.h
 )
 
 # 生成 MOC 文件
@@ -40,13 +39,13 @@ target_include_directories(${PROJECT_NAME} PRIVATE
 
 # 链接 Qt5 库
 target_link_libraries(${PROJECT_NAME} PRIVATE
-    Qt5::Core
-    Qt5::Gui
-    Qt5::Widgets
-    Qt5::PrintSupport
+        Qt5::Core
+        Qt5::Gui
+        Qt5::Widgets
+        Qt5::PrintSupport
 )
 
 # 安装目标（可选）
 install(TARGETS ${PROJECT_NAME}
-    RUNTIME DESTINATION bin
+        RUNTIME DESTINATION bin
 )
