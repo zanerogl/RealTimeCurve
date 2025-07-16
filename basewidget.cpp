@@ -73,13 +73,11 @@ void BaseWidget::initPlot() {
     // 配置数据定时器
     m_timeData = 0.0;
     m_dataTimer = new QTimer(this);
-    m_dataTimer->setInterval(50);   //50ms 更新一次
     connect(m_dataTimer, &QTimer::timeout, this, &BaseWidget::updatePlot);
-    m_dataTimer->start();
+    m_dataTimer->start(50);   //50ms 更新一次
 
     // 配置拖动定时器
     m_dragTimer = new QTimer(this);
-    m_dragTimer->setInterval(3000);
     connect(m_dragTimer, &QTimer::timeout, this, &BaseWidget::restoreAutoRange);
 }
 
