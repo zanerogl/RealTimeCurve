@@ -45,7 +45,3 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
         Qt5::PrintSupport
 )
 
-# 安装目标（可选）
-install(TARGETS ${PROJECT_NAME}
-        RUNTIME DESTINATION bin
-)
